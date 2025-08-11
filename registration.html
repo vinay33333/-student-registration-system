@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register Student | Student Registration System</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+<header class="header">
+  <div class="container header-title">
+    <i class="fas fa-user-plus"></i>
+    <h1>Student Registration</h1>
+  </div>
+  <p class="header-desc">Fill in the form below with accurate details. All fields are required.</p>
+</header>
+
+<nav class="navigation">
+  <ul>
+    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="registration.html" class="active"><i class="fas fa-user-plus"></i> Register</a></li>
+    <li><a href="studentData.html"><i class="fas fa-users"></i> Records</a></li>
+  </ul>
+</nav>
+
+<main class="container">
+  <section class="form-section">
+    <h2><i class="fas fa-user-plus"></i> Student Registration Form</h2>
+
+    <!-- Registration Form -->
+    <form id="studentForm" class="student-form" autocomplete="off">
+      <div class="form-fields">
+        <!-- Name -->
+        <div class="form-group">
+          <label for="studentName">Name *</label>
+          <input type="text" id="studentName" placeholder="Enter full name" required>
+          <span class="error-message" id="nameError"></span>
+        </div>
+
+        <!-- Student ID -->
+        <div class="form-group">
+          <label for="studentId">Student ID *</label>
+          <input type="text" id="studentId" placeholder="Enter numeric ID" required>
+          <span class="error-message" id="idError"></span>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="emailId">Email *</label>
+          <input type="email" id="emailId" placeholder="your@email.com" required>
+          <span class="error-message" id="emailError"></span>
+        </div>
+
+        <!-- Contact -->
+        <div class="form-group">
+          <label for="contactNumber">Contact *</label>
+          <input type="tel" id="contactNumber" placeholder="10+ digit mobile number" required>
+          <span class="error-message" id="contactError"></span>
+        </div>
+
+        <!-- Address -->
+        <div class="form-group">
+          <label for="address">Address *</label>
+          <input type="text" id="address" placeholder="Full address" required>
+          <span class="error-message" id="addressError"></span>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">
+          <i class="fas fa-plus"></i> Add Student
+        </button>
+        <button type="button" class="btn btn-secondary" onclick="resetForm()">
+          <i class="fas fa-eraser"></i> Clear
+        </button>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 — Sampath Vinay Ram Vuppala — Student Registration System</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
